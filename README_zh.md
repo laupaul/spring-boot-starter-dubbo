@@ -25,8 +25,8 @@ Spring Boot with dubbo support. dubbo是一个RPC框架。
 
 ```properties
 spring.dubbo.appname=spring-boot-starter-dubbo-provider-test
-spring.dubbo.registry=multicast://224.0.0.0:1111
-spring.dubbo.protocol=dubbo
+spring.dubbo.registry=zookeeper://127.0.0.1:2181
+spring.dubbo.scan=org.dubbo.service
 ```
 
 * 接下来在Spring Boot Application的上添加`@EnableDubboConfiguration`, 表示要开启dubbo功能. (dubbo provider服务可以使用或者不使用web容器)
